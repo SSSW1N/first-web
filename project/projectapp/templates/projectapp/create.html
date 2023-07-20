@@ -1,0 +1,18 @@
+{% extends 'projectapp/baze.html' %}
+
+{% block title %}
+Создать задачу
+{% endblock %}
+
+{% block content %}
+    <h1>Создать задачу</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.text }}<br>
+      <button type="submit" class="btn btn-success">Добавить</button>
+    <span>{{ error }}</span>
+    </form>
+
+
+{% endblock %}
